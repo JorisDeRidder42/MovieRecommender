@@ -8,5 +8,6 @@ export const fetchMovies = async (endpoint:any) => {
     const url = `${BASE_URL}${endpoint}?api_key=${API_KEY}&language=en-US`;
     const response = await fetch(url);
     const data = await response.json();
+    console.log('res', data.results);
     return data.results;
 };
